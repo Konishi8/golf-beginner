@@ -45,7 +45,6 @@ ER図:https://drive.google.com/file/d/1MrP2cCb0y_TITwu6WP8TVppCw5HACpGH/view?usp
 * 練習記録編集機能 #目標→記録に変更
 * 練習記録削除機能 #目標→記録に変更
 * 主軸ポイント作成機能
-* 主軸ポイント作成機能
 * 主軸ポイント編集機能
 * 主軸ポイント削除機能
 *
