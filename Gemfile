@@ -67,3 +67,12 @@ group :test do
 end
 
 gem 'pg', '~> 1.5.6'
+gem 'bootstrap5-kaminari-views'
+gem 'kaminari', "1.2.2"
+gem 'rails-i18n', '~> 7.0.0'
+# gem "sassc-rails"
+gem "dartsass-rails", "~> 0.4.0"
+gem 'bootstrap', '~> 5.0.0'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '>= 3.2'
