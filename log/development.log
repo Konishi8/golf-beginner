@@ -1268,3 +1268,896 @@ Started GET "/users/sign_out" for ::1 at 2024-09-13 18:30:35 +0900
 ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
   
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2024-09-20 10:16:35 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.4ms | Allocations: 339)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3273)
+Completed 200 OK in 68ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 39216)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-20 10:16:38 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 2.2ms | Allocations: 13233)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:16:38 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 850)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1089)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-20 10:16:40 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1701)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:16:40 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 871)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1107)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:18:17 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:21:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 114)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 329)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1916)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 5056)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:21:33 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 865)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1105)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:21:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:24:51 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 254)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1656)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 3750)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:24:52 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 874)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1112)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:24:53 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 859)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1095)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:24:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:25:41 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 250)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1675)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3770)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:25:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:28:26 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 337)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3275)
+Completed 200 OK in 59ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 39001)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:28:27 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 873)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1114)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:28:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:33:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 337)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3292)
+Completed 200 OK in 53ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 38858)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:33:35 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 876)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1119)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:33:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:37:03 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 114)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1691)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 3792)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:37:04 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 868)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1104)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:37:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:38:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:39:00 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 114)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 250)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1667)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3723)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:39:01 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 853)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1089)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-20 10:39:01 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 2.7ms | Allocations: 13204)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:39:01 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 841)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1077)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-20 10:39:03 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1728)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:39:03 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 862)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1098)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-20 10:39:04 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1902)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:39:04 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 850)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1086)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:39:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:39:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 856)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1092)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:39:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 880)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1115)
+
+
+Started GET "/" for ::1 at 2024-09-20 10:39:33 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 871)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1106)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:39:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 10:44:22 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 339)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3269)
+Completed 200 OK in 60ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 38835)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:44:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:44:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-09-20 10:44:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:04:01 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 856)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1098)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:04:02 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 865)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-20 18:04:15 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms | Allocations: 13198)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:04:15 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 865)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-20 18:04:17 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1733)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:04:17 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 844)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1079)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-09-20 18:04:18 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1907)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:04:18 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 871)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 1108)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:04:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:14:58 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 251)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1675)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3774)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:14:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:16:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 337)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3272)
+Completed 200 OK in 62ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 38996)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:16:53 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:17:53 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 856)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:17:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:20:20 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 114)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 307)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1715)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3814)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:20:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:20:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:20:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:21:02 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 116)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 297)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1737)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 3836)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:21:03 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:30:21 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 866)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1102)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:30:30 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 869)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1104)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:30:31 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 887)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1122)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:30:33 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 3.4ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 899)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1136)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:40:04 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 389)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3326)
+Completed 200 OK in 67ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 38967)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:40:05 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 880)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1121)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:40:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 887)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1129)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:40:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 884)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1120)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:40:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 875)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1112)
+
+
+Started GET "/" for ::1 at 2024-09-20 18:40:07 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 1.0ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 893)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1129)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:40:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:41:50 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 1077.2ms | Allocations: 4644)
+Completed 500 Internal Server Error in 1080ms (ActiveRecord: 0.0ms | Allocations: 6747)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/konishitatsuya/golf/golf-beginner/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+    11: 
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2024-09-20 18:41:53 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 506.0ms | Allocations: 4095)
+Completed 500 Internal Server Error in 507ms (ActiveRecord: 0.0ms | Allocations: 4321)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/konishitatsuya/golf/golf-beginner/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+    11: 
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2024-09-20 18:51:08 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 204)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 389)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3332)
+Completed 200 OK in 56ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 38898)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:51:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:51:59 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 116)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 299)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1623)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 3724)
+
+
+Started GET "/path/to/your/application.js" for ::1 at 2024-09-20 18:51:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/your/application.js"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:52:00 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 866)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1107)
+
+
+Started GET "/path/to/your/application.js" for ::1 at 2024-09-20 18:52:00 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/your/application.js"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:52:00 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 830)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1066)
+
+
+Started GET "/path/to/your/application.js" for ::1 at 2024-09-20 18:52:00 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/your/application.js"):
+  
+Started GET "/" for ::1 at 2024-09-20 18:52:00 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 824)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1060)
+
+
+Started GET "/path/to/your/application.js" for ::1 at 2024-09-20 18:52:00 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/your/application.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-09-20 18:52:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-09-20 19:09:42 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 114)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.5ms | Allocations: 574)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1985)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4084)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-09-20 19:09:43 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"ログアウト"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 24ms (ActiveRecord: 2.9ms | Allocations: 14549)
+
+
+Started GET "/" for ::1 at 2024-09-20 19:09:43 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 242)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1012)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1249)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-09-20 19:09:45 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"ログアウト"}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 610)
+
+
+Started GET "/" for ::1 at 2024-09-20 19:09:45 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.4ms | Allocations: 242)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1005)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-09-20 19:09:46 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"ログアウト"}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 590)
+
+
+Started GET "/" for ::1 at 2024-09-20 19:09:46 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.6ms | Allocations: 242)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1005)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-09-20 19:09:47 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3368)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.3ms | Allocations: 253)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4079)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5671)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-09-20 19:09:49 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"ログアウト"}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 573)
+
+
+Started GET "/" for ::1 at 2024-09-20 19:09:49 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_before_login_header.html.erb (Duration: 0.5ms | Allocations: 242)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 997)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 1236)
+
+
