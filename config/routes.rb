@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: 'home#top'
   get 'mypage', to: 'mypage#show', as: 'mypage'
+  resources :practice_records
 end

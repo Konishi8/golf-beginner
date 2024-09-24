@@ -2704,3 +2704,42 @@ Migrating to CreatePracticeRecords (20240922115837)
   [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240922115837') RETURNING "version"[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/mypage" for ::1 at 2024-09-23 15:45:33 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 244)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 489)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2000)
+Completed 200 OK in 73ms (Views: 10.4ms | ActiveRecord: 1.0ms | Allocations: 50639)
+
+
+Started GET "/" for ::1 at 2024-09-23 15:45:37 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 110)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1731)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2305)
+
+
+Started GET "/practice_records" for ::1 at 2024-09-23 15:46:07 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 90)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 169)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 679)
+Completed 200 OK in 17ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 7889)
+
+
