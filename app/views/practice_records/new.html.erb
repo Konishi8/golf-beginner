@@ -1,0 +1,40 @@
+<h1>New Practice Record</h1>
+
+<%= form_with model: @practice_record, local: true do |form| %>
+  <% if @practice_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@practice_record.errors.count, "error") %> prohibited this practice record from being saved:</h2>
+      <ul>
+        <% @practice_record.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :practice_menu_id %>
+    <%= form.number_field :practice_menu_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.text_field :goal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', practice_records_path %>
