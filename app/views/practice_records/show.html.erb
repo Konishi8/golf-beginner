@@ -1,0 +1,19 @@
+<h1>Practice Record Details</h1>
+
+<p>
+  <strong>Date:</strong>
+  <%= @practice_record.date %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @practice_record.goal %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @practice_record.comment %>
+</p>
+
+<%= link_to 'Edit', edit_practice_record_path(@practice_record) %> |
+<%= link_to 'Back to List', practice_records_path %>
