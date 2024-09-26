@@ -1,6 +1,6 @@
 class PracticeRecordsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_practice_record, only: [:show, :edit, :update, :destroy]
+  before_action :set_practice_record, only: [:show]
   def index
     @practice_records = current_user.practice_records
   end
