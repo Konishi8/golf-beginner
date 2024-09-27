@@ -1,6 +1,6 @@
 class PracticeRecordsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_practice_record, only: [:show]
+  before_action :set_practice_record, only: [:show, :edit]
   def index
     @practice_records = current_user.practice_records
   end
@@ -22,6 +22,8 @@ class PracticeRecordsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def edit; end
 
   private
 

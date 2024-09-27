@@ -1,0 +1,22 @@
+<h1>練習記録の編集</h1>
+
+<%= form_for @practice_record do |f| %>
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :goal %>
+    <%= f.text_field :goal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新" %>
+  </div>
+<% end %>
