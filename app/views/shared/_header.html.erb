@@ -1,5 +1,7 @@
 <header>
-<%= form_with url: destroy_user_session_path, method: :delete do %>
-  <%= submit_tag 'ログアウト', class: 'btn btn-danger' %>
-<% end %>
+  <nav class='navbar navbar-expand-lg navigation bg-primary'>
+  <%= form_with url: destroy_user_session_path, method: :delete do %>
+    <%= submit_tag 'ログアウト', class: 'btn' %>
+  <% end %>
+  </nav>
 </header>

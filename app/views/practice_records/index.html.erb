@@ -1,1 +1,23 @@
-<h1>Practice Records</h1>
+<h1>練習記録一覧</h1>
+<%= link_to '練習記録作成', new_practice_record_path %>
+<table>
+  <thead>
+    <tr>
+      <th class="p-3">日付</th>
+      <th class="p-3">目標</th>
+      <th class="p-3">コメント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @practice_records.each do |record| %>
+      <tr>
+        <td class="p-3"><%= record.date.strftime("%Y-%m-%d") %></td>
+        <td class="p-3"><%= record.goal %></td>
+        <td class="p-3"><%= record.comment %></td>
+        <td class="p-3">
+        <%= link_to '編集', edit_practice_record_path(record), class: 'btn btn-warning' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
