@@ -1,5 +1,6 @@
 <header>
   <nav class='navbar navbar-expand-lg navigation bg-primary'>
+  <%= image_tag('logo.png', class: 'logo') %>
   <%= form_with url: destroy_user_session_path, method: :delete do %>
     <%= submit_tag 'ログアウト', class: 'btn' %>
   <% end %>
