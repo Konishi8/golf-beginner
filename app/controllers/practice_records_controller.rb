@@ -1,6 +1,20 @@
 class PracticeRecordsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_practice_record, only: [:show, :edit]
+  before_action :set_practice_record, only: [:show, :edit, :destroy, :update]
+
+  def update
+    if @practice_record.update(practice_record_params)
+      redirect_to @practice_record, notice: '練習記録が更新されました。'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @practice_record.destroy
+    redirect_to practice_records_path, notice: '練習記録が削除されました。'
+  end
+
   def index
     @practice_records = current_user.practice_records
   end
@@ -17,7 +31,7 @@ class PracticeRecordsController < ApplicationController
     @practice_record = current_user.practice_records.build(practice_record_params)
     
     if @practice_record.save
-      redirect_to @practice_record, notice: 'Practice record was successfully created.'
+      redirect_to @practice_record, notice: '練習記録が作成されました。'
     else
       render :new, status: :unprocessable_entity
     end
