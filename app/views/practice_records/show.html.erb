@@ -1,19 +1,35 @@
-<h1>Practice Record Details</h1>
+<h1 class="text-center my-4">練習記録詳細</h1>
 
-<p>
-  <strong>Date:</strong>
-  <%= @practice_record.date %>
-</p>
-
-<p>
-  <strong>Goal:</strong>
-  <%= @practice_record.goal %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @practice_record.comment %>
-</p>
-
-<%= link_to 'Edit', edit_practice_record_path(@practice_record) %> |
-<%= link_to 'Back to List', practice_records_path %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>日付:</strong>
+            <%= @practice_record.date.strftime("%Y-%m-%d") %>
+          </p>
+          <p class="card-text">
+            <strong>目標:</strong>
+            <%= @practice_record.goal %>
+          </p>
+          <p class="card-text">
+            <strong>コメント:</strong>
+            <%= @practice_record.comment %>
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <div class="d-flex justify-content-between">
+            <%= link_to '編集', edit_practice_record_path(@practice_record), class: 'btn btn-warning' %>
+            <%= form_with url: practice_record_path(@practice_record), method: :delete do %>
+              <%= submit_tag '削除', class: 'btn btn-danger' %>
+            <% end %>
+          </div>
+          <div class="mt-3">
+            <%= link_to '一覧に戻る', practice_records_path, class: 'btn btn-secondary' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
