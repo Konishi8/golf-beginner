@@ -1,0 +1,2 @@
+class KeyPoint < ApplicationRecord
+end
