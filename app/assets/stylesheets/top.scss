@@ -24,3 +24,16 @@
   height: 50px;
   width: auto;
 }
+
+.text-truncate {
+  white-space: nowrap;        /* 1行に収める */
+  overflow: hidden;           /* 見えない部分を隠す */
+  text-overflow: ellipsis;    /* 長すぎるテキストに "..." を付与 */
+}
+
+// 横並びにするためのスタイル
+.date-select-inline select {
+  display: inline-block;
+  width: auto;
+  margin-right: 10px; // 要素の間にスペースを入れる
+}

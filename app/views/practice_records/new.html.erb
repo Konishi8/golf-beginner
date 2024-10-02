@@ -1,40 +1,49 @@
-<h1> 練習記録作成</h1>
+<h1 class="text-center my-4">練習記録作成</h1>
 
-<%= form_with model: @practice_record, local: true do |form| %>
-  <% if @practice_record.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@practice_record.errors.count, "error") %> prohibited this practice record from being saved:</h2>
-      <ul>
-        <% @practice_record.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <%= form_for @practice_record, html: { class: 'form-horizontal' }, local: true do |form| %>
+        <div class="form-group row">
+          <%= form.label :practice_menu_id, class: 'col-sm-2 col-form-label' %>
+          <div class="col-sm-10">
+            <%= form.number_field :practice_menu_id, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= form.label :date, class: 'col-sm-2 col-form-label' %>
+          <div class="col-sm-10">
+            <div class="date-select-inline">
+              <%= form.date_select :date, { use_month_numbers: true }, class: 'form-control-inline' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= form.label :goal, class: 'col-sm-2 col-form-label' %>
+          <div class="col-sm-10">
+            <%= form.text_field :goal, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= form.label :comment, class: 'col-sm-2 col-form-label' %>
+          <div class="col-sm-10">
+            <%= form.text_area :comment, rows: 5, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <%= form.submit "作成", class: "btn btn-primary" %>
+          </div>
+        </div>
+
+      <% end %>
+      <div class="text-center mt-3">
+        <%= link_to '一覧に戻る', practice_records_path, class: 'btn btn-secondary' %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :practice_menu_id %>
-    <%= form.number_field :practice_menu_id %>
   </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.datetime_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :goal %>
-    <%= form.text_field :goal %>
-  </div>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', practice_records_path %>
+</div>
