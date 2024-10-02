@@ -1,21 +1,22 @@
 <h1>練習記録一覧</h1>
 <%= link_to '練習記録作成', new_practice_record_path %>
-<table>
+<table class="table table-striped" style="table-layout: fixed; width: 100%;">
   <thead>
     <tr>
-      <th class="p-3">日付</th>
-      <th class="p-3">目標</th>
-      <th class="p-3">コメント</th>
+      <th class="p-3" style="width: 15%;">日付</th>
+      <th class="p-3" style="width: 20%;">目標</th>
+      <th class="p-3" style="width: 45%;">コメント</th>
+      <th class="p-3" style="width: 20%;">操作</th>
     </tr>
   </thead>
   <tbody>
     <% @practice_records.each do |record| %>
       <tr>
         <td class="p-3"><%= record.date.strftime("%Y-%m-%d") %></td>
-        <td class="p-3"><%= record.goal %></td>
-        <td class="p-3"><%= record.comment %></td>
+        <td class="p-3 text-truncate" style="max-width: 200px;"><%= record.goal %></td>
+        <td class="p-3 text-truncate" style="max-width: 250px;"><%= record.comment %></td>
         <td class="p-3">
-        <%= link_to '詳細', practice_record_path(record), class: 'btn btn-primary' %>
+          <%= link_to '詳細', practice_record_path(record), class: 'btn btn-primary' %>
         </td>
       </tr>
     <% end %>
