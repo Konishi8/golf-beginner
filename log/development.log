@@ -9421,3 +9421,189 @@ Processing by MypageController#show as HTML
 Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3017)
 
 
+Started GET "/key_points" for ::1 at 2024-10-04 18:28:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.2ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:12
+  Rendered key_points/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 6746)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 468)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 215)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 8859)
+Completed 200 OK in 89ms (Views: 9.8ms | ActiveRecord: 1.8ms | Allocations: 60271)
+
+
+Started GET "/key_points/new" for ::1 at 2024-10-04 18:28:34 +0900
+Processing by KeyPointsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/new.html.erb within layouts/application
+  Rendered key_points/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1522)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2232)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 4144)
+
+
+Started GET "/key_points/new" for ::1 at 2024-10-04 18:28:55 +0900
+Processing by KeyPointsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/new.html.erb within layouts/application
+  Rendered key_points/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 718)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 365)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2474)
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 1.3ms | Allocations: 13999)
+
+
+Started GET "/key_points" for ::1 at 2024-10-04 18:44:22 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:12
+  Rendered key_points/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 4441)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 384)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 208)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 6225)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 1.4ms | Allocations: 15344)
+
+
+Started GET "/key_points" for ::1 at 2024-10-04 18:49:44 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  Rendered key_points/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1591)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1690)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms | Allocations: 10811)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+  <h1>主軸ポイント一覧</h1>
+  <%= link_to 'キーポイント作成', new_key_point_path %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>作成日</th>
+        <th>アクション</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @key_points.each do |key_point| %>
+        <tr>
+          <td><%= key_point.title %></td>
+          <td><%= key_point.created_at.strftime("%Y-%m-%d") %></td>
+          <td>
+            <%= link_to '編集', edit_key_point_path(key_point), class: 'btn btn-warning' %>
+            <%= form_with url: key_point_path(key_point), method: :delete, class: "d-inline" do %>
+              <%= submit_tag '削除', class: 'btn btn-danger' %>
+            </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+):
+1:    <div class="container">
+2:      <h1>主軸ポイント一覧</h1>
+3:      <%= link_to 'キーポイント作成', new_key_point_path %>
+4:      <table class="table table-striped">
+5:        <thead>
+6:          <tr>
+7:            <th>タイトル</th>
+8:            <th>作成日</th>
+9:            <th>アクション</th>
+10:          </tr>
+11:        </thead>
+12:        <tbody>
+13:          <% @key_points.each do |key_point| %>
+14:            <tr>
+15:              <td><%= key_point.title %></td>
+16:              <td><%= key_point.created_at.strftime("%Y-%m-%d") %></td>
+17:              <td>
+18:                <%= link_to '編集', edit_key_point_path(key_point), class: 'btn btn-warning' %>
+19:                <%= form_with url: key_point_path(key_point), method: :delete, class: "d-inline" do %>
+20:                  <%= submit_tag '削除', class: 'btn btn-danger' %>
+21:                </td>
+22:            </tr>
+23:          <% end %>
+24:        </tbody>
+25:      </table>
+26:    </div>
+  
+app/views/key_points/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/key_points" for ::1 at 2024-10-04 18:51:15 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 4740)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 384)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 208)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 6524)
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 1.7ms | Allocations: 16290)
+
+
+Started GET "/key_points/1/edit" for ::1 at 2024-10-04 18:51:19 +0900
+Processing by KeyPointsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/edit.html.erb within layouts/application
+  Rendered key_points/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 639)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1336)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3961)
+
+
+Started PATCH "/key_points/1" for ::1 at 2024-10-04 18:51:31 +0900
+Processing by KeyPointsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "key_point"=>{"title"=>"脇を締めること"}, "commit"=>"更新", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+  [1m[36mKeyPoint Update (1.3ms)[0m  [1m[33mUPDATE "key_points" SET "title" = ?, "updated_at" = ? WHERE "key_points"."id" = ?[0m  [["title", "脇を締めること"], ["updated_at", "2024-10-04 09:51:31.092075"], ["id", 1]]
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+Redirected to http://localhost:3000/key_points
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms | Allocations: 5318)
+
+
+Started GET "/key_points" for ::1 at 2024-10-04 18:51:31 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 720)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1422)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3233)
+
+
