@@ -9607,3 +9607,957 @@ Processing by KeyPointsController#index as HTML
 Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3233)
 
 
+Started GET "/key_points/1/edit" for ::1 at 2024-10-05 19:09:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by KeyPointsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/edit.html.erb within layouts/application
+  Rendered key_points/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1660)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1796)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 1.5ms | Allocations: 58569)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 class="text-center my-4">キーポイント編集</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <%= form_with model: @key_point, do |f| %>
+        <div class="form-group row">
+          <%= f.label :title, class: 'col-sm-2 col-form-label' %>
+          <div class="col-sm-10">
+            <%= f.text_field :title, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <%= f.submit "更新", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+):
+1:    <h1 class="text-center my-4">キーポイント編集</h1>
+2:    
+3:    <div class="container">
+4:      <div class="row justify-content-center">
+5:        <div class="col-md-8">
+6:          <%= form_with model: @key_point, do |f| %>
+7:            <div class="form-group row">
+8:              <%= f.label :title, class: 'col-sm-2 col-form-label' %>
+9:              <div class="col-sm-10">
+10:                <%= f.text_field :title, class: 'form-control' %>
+11:              </div>
+12:            </div>
+13:            <div class="form-group row">
+14:              <div class="col-sm-10 offset-sm-2">
+15:                <%= f.submit "更新", class: "btn btn-primary" %>
+16:              </div>
+17:            </div>
+18:          <% end %>
+19:        </div>
+20:      </div>
+21:    </div>
+  
+app/views/key_points/edit.html.erb:6: syntax error, unexpected `do' for block
+app/views/key_points/edit.html.erb:25: syntax error, unexpected `end'
+Started GET "/key_points/1/edit" for ::1 at 2024-10-05 19:11:34 +0900
+Processing by KeyPointsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/edit.html.erb within layouts/application
+  Rendered key_points/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1708)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 376)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3583)
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 1.2ms | Allocations: 17030)
+
+
+Started PATCH "/key_points/1" for ::1 at 2024-10-05 19:11:42 +0900
+Processing by KeyPointsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "key_point"=>{"title"=>"脇を締めることにする"}, "commit"=>"更新", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+  [1m[36mKeyPoint Update (1.4ms)[0m  [1m[33mUPDATE "key_points" SET "title" = ?, "updated_at" = ? WHERE "key_points"."id" = ?[0m  [["title", "脇を締めることにする"], ["updated_at", "2024-10-05 10:11:42.539927"], ["id", 1]]
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+Redirected to http://localhost:3000/key_points
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 5416)
+
+
+Started GET "/key_points" for ::1 at 2024-10-05 19:11:42 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1887)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2589)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4477)
+
+
+Started GET "/key_points/new" for ::1 at 2024-10-05 19:17:46 +0900
+Processing by KeyPointsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/new.html.erb within layouts/application
+  Rendered key_points/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 706)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 365)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2462)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.9ms | Allocations: 13177)
+
+
+Started POST "/key_points" for ::1 at 2024-10-05 19:18:12 +0900
+Processing by KeyPointsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "key_point"=>{"title"=>"中心軸をずらさないように意識してテイクバック"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/key_points_controller.rb:15:in `create'
+  [1m[36mKeyPoint Create (0.7ms)[0m  [1m[32mINSERT INTO "key_points" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "中心軸をずらさないように意識してテイクバック"], ["user_id", 2], ["created_at", "2024-10-05 10:18:12.344725"], ["updated_at", "2024-10-05 10:18:12.344725"]]
+  ↳ app/controllers/key_points_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/key_points_controller.rb:15:in `create'
+Redirected to http://localhost:3000/key_points
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms | Allocations: 4790)
+
+
+Started GET "/key_points" for ::1 at 2024-10-05 19:18:12 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.2ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1896)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2598)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 4486)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:41:15 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 810)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1512)
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 2.0ms | Allocations: 3624)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:41:16 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 6954)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 7672)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 11501)
+
+
+Started GET "/practice_records/new" for ::1 at 2024-10-06 10:41:19 +0900
+Processing by PracticeRecordsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/new.html.erb within layouts/application
+  Rendered practice_records/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2658)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3368)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 5275)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:42:01 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 4797)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 384)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 208)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 6581)
+Completed 200 OK in 17ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 16329)
+
+
+Started GET "/key_points/4/edit" for ::1 at 2024-10-06 10:42:08 +0900
+Processing by KeyPointsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/edit.html.erb within layouts/application
+  Rendered key_points/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 603)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1300)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 3879)
+
+
+Started PATCH "/key_points/4" for ::1 at 2024-10-06 10:42:15 +0900
+Processing by KeyPointsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "key_point"=>{"title"=>"中心軸をずらさないように意識してテイクバックする"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ? AND "key_points"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/key_points_controller.rb:45:in `set_key_point'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+  [1m[36mKeyPoint Update (0.7ms)[0m  [1m[33mUPDATE "key_points" SET "title" = ?, "updated_at" = ? WHERE "key_points"."id" = ?[0m  [["title", "中心軸をずらさないように意識してテイクバックする"], ["updated_at", "2024-10-06 01:42:15.529801"], ["id", 4]]
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/key_points_controller.rb:26:in `update'
+Redirected to http://localhost:3000/key_points
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 4128)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:42:15 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 791)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1493)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 3322)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 10:42:20 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 118)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 192)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 855)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2996)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:42:26 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 5471)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 6189)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 10093)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 10:42:28 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 184)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 723)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 2522)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:45:35 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 5508)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 384)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 208)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 7288)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 1.3ms | Allocations: 17229)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 10:45:36 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 512)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1209)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 3833)
+
+
+Started GET "/practice_records/2/edit" for ::1 at 2024-10-06 10:45:38 +0900
+Processing by PracticeRecordsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/edit.html.erb within layouts/application
+  Rendered practice_records/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1740)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2437)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4944)
+
+
+Started PATCH "/practice_records/2" for ::1 at 2024-10-06 10:45:47 +0900
+Processing by PracticeRecordsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "practice_record"=>{"date(1i)"=>"2024", "date(2i)"=>"9", "date(3i)"=>"27", "goal"=>"脇を締める", "comment"=>"ミスショットが多い１日であった。今度は胸から胸を意識したい。なぜだか右に行く気がするが、これは左肩が上がっている事が原因だった\r\n"}, "commit"=>"更新", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practice_records_controller.rb:6:in `update'
+  [1m[36mPracticeRecord Update (0.7ms)[0m  [1m[33mUPDATE "practice_records" SET "date" = ?, "comment" = ?, "updated_at" = ? WHERE "practice_records"."id" = ?[0m  [["date", "2024-09-27 00:00:00"], ["comment", "ミスショットが多い１日であった。今度は胸から胸を意識したい。なぜだか右に行く気がするが、これは左肩が上がっている事が原因だった\r\n"], ["updated_at", "2024-10-06 01:45:47.700987"], ["id", 2]]
+  ↳ app/controllers/practice_records_controller.rb:6:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practice_records_controller.rb:6:in `update'
+Redirected to http://localhost:3000/practice_records/2
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 4575)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 10:45:47 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 240)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 937)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3401)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 10:45:49 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 854)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3008)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:45:50 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 655)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1357)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 3182)
+
+
+Started GET "/practice_records/new" for ::1 at 2024-10-06 10:46:37 +0900
+Processing by PracticeRecordsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/new.html.erb within layouts/application
+  Rendered practice_records/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1967)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2677)
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4570)
+
+
+Started GET "/practice_records/new" for ::1 at 2024-10-06 10:47:57 +0900
+Processing by PracticeRecordsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/new.html.erb within layouts/application
+  Rendered practice_records/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1613)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1705)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms | Allocations: 14237)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for an instance of #<Class:0x00000001270de9e0>):
+     7:         <div class="form-group row">
+     8:           <%= f.label :practice_menu_id, class: 'col-sm-2 col-form-label' %>
+     9:           <div class="col-sm-10">
+    10:             <%= form.number_field :practice_menu_id, class: 'form-control' %>
+    11:           </div>
+    12:         </div>
+    13: 
+  
+app/views/practice_records/new.html.erb:10
+app/views/practice_records/new.html.erb:6
+Started GET "/practice_records/new" for ::1 at 2024-10-06 10:48:21 +0900
+Processing by PracticeRecordsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/new.html.erb within layouts/application
+  Rendered practice_records/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1638)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1730)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.2ms | Allocations: 14257)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for an instance of #<Class:0x00000001269d62d8>):
+     7:         <div class="form-group row">
+     8:           <%= f.label :practice_menu_id, class: 'col-sm-2 col-form-label' %>
+     9:           <div class="col-sm-10">
+    10:             <%= form.number_field :practice_menu_id, class: 'form-control' %>
+    11:           </div>
+    12:         </div>
+    13: 
+  
+app/views/practice_records/new.html.erb:10
+app/views/practice_records/new.html.erb:6
+Started GET "/" for ::1 at 2024-10-06 10:49:04 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 116)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 412)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 213)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 7474)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 1.0ms | Allocations: 9580)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:49:06 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5480)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 6198)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 10097)
+
+
+Started GET "/practice_records/new" for ::1 at 2024-10-06 10:49:07 +0900
+Processing by PracticeRecordsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/new.html.erb within layouts/application
+  Rendered practice_records/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1986)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2696)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 4591)
+
+
+Started POST "/practice_records" for ::1 at 2024-10-06 10:50:14 +0900
+Processing by PracticeRecordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "practice_record"=>{"practice_menu_id"=>"", "date(1i)"=>"2024", "date(2i)"=>"10", "date(3i)"=>"6", "goal"=>"180球打つ", "comment"=>"スライスが多い１日であった。あおり打ちが原因であると思う。同じ姿勢で打つことを意識したい"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practice_records_controller.rb:33:in `create'
+  [1m[36mPracticeRecord Create (1.5ms)[0m  [1m[32mINSERT INTO "practice_records" ("user_id", "practice_menu_id", "date", "goal", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 2], ["practice_menu_id", nil], ["date", "2024-10-06 00:00:00"], ["goal", "180球打つ"], ["comment", "スライスが多い１日であった。あおり打ちが原因であると思う。同じ姿勢で打つことを意識したい"], ["created_at", "2024-10-06 01:50:14.066648"], ["updated_at", "2024-10-06 01:50:14.066648"]]
+  ↳ app/controllers/practice_records_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practice_records_controller.rb:33:in `create'
+Redirected to http://localhost:3000/practice_records/4
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms | Allocations: 3927)
+
+
+Started GET "/practice_records/4" for ::1 at 2024-10-06 10:50:14 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 504)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1201)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 3802)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:50:16 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 727)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1429)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3257)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:52:44 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.0ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 6955)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 468)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 215)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 9068)
+Completed 200 OK in 79ms (Views: 9.2ms | ActiveRecord: 1.3ms | Allocations: 60512)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 10:52:46 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 118)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 855)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3035)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 10:53:07 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 184)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 723)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2548)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:53:08 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 6985)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered shared/_sidebar.html.erb (Duration: 0.0ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 7703)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 11635)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:53:12 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 792)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1494)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3334)
+
+
+Started GET "/key_points/new" for ::1 at 2024-10-06 10:56:22 +0900
+Processing by KeyPointsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/new.html.erb within layouts/application
+  Rendered key_points/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 11254)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 11964)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 13902)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:57:07 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 791)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1493)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3312)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 10:57:09 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 184)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 723)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2535)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:57:09 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 727)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1429)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 3266)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 10:57:11 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 516)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1213)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3849)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 10:58:36 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 583)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 361)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2318)
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 1.1ms | Allocations: 16674)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:58:44 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1816)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2518)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 4417)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 10:58:45 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 239)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 936)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 3393)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:58:47 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 727)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1429)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3284)
+
+
+Started GET "/key_points" for ::1 at 2024-10-06 10:58:53 +0900
+Processing by KeyPointsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering key_points/index.html.erb within layouts/application
+  [1m[36mKeyPoint Load (0.1ms)[0m  [1m[34mSELECT "key_points".* FROM "key_points" WHERE "key_points"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/key_points/index.html.erb:13
+  Rendered key_points/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4785)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 5503)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 9232)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 10:58:55 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 728)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1430)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 3255)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 10:59:06 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 239)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 936)
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 3389)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:00:49 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 587)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 361)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2326)
+Completed 200 OK in 16ms (Views: 3.3ms | ActiveRecord: 1.2ms | Allocations: 16704)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:00:50 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 239)
+  Rendered shared/_header.html.erb (Duration: 1.0ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 936)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3401)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:00:51 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 239)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 936)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 3393)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:01:06 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 583)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 361)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2318)
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 1.3ms | Allocations: 16687)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:05:09 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 587)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 361)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2322)
+Completed 200 OK in 11ms (Views: 3.1ms | ActiveRecord: 1.2ms | Allocations: 16699)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:05:51 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 589)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 361)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2328)
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 1.2ms | Allocations: 16719)
+
+
+Started GET "/practice_records/2" for ::1 at 2024-10-06 11:07:06 +0900
+Processing by PracticeRecordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPracticeRecord Load (0.0ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ? AND "practice_records"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practice_records_controller.rb:49:in `set_practice_record'
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/show.html.erb within layouts/application
+  Rendered practice_records/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 587)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 361)
+  Rendered shared/_sidebar.html.erb (Duration: 0.2ms | Allocations: 207)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2324)
+Completed 200 OK in 14ms (Views: 3.0ms | ActiveRecord: 1.2ms | Allocations: 16687)
+
+
+Started GET "/practice_records" for ::1 at 2024-10-06 11:09:44 +0900
+Processing by PracticeRecordsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/index.html.erb within layouts/application
+  [1m[36mPracticeRecord Load (0.1ms)[0m  [1m[34mSELECT "practice_records".* FROM "practice_records" WHERE "practice_records"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/practice_records/index.html.erb:13
+  Rendered practice_records/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1815)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2517)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 4417)
+
+
+Started GET "/practice_records/new" for ::1 at 2024-10-06 11:09:59 +0900
+Processing by PracticeRecordsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering practice_records/new.html.erb within layouts/application
+  Rendered practice_records/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 12455)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 13165)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.1ms | Allocations: 15068)
+
+
+Started GET "/mypage" for ::1 at 2024-10-06 11:10:24 +0900
+Processing by MypageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mypage/show.html.erb within layouts/application
+  Rendered mypage/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 115)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered shared/_sidebar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 852)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3015)
+
+

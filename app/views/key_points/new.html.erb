@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <%= form_for @key_point, html: { class: 'form-horizontal' }, local: true do |form| %>
+      <%= form_with model: @key_point, local: true do |form| %> <!-- form_for を form_with に変更 -->
         <div class="form-group row">
           <%= form.label :title, class: 'col-sm-2 col-form-label' %>
           <div class="col-sm-10">
@@ -16,8 +16,8 @@
             <%= form.submit "作成", class: "btn btn-primary" %>
           </div>
         </div>
-
       <% end %>
+
       <div class="text-center mt-3">
         <%= link_to '一覧に戻る', key_points_path, class: 'btn btn-secondary' %>
       </div>
