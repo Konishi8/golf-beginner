@@ -19,6 +19,15 @@
             <%= form_with url: key_point_path(key_point), method: :delete do %>
               <%= submit_tag '削除', class: 'btn btn-danger ms-2' %>
             <% end %>
+            <% if current_user.favorited_key_points.include?(key_point) %>
+              <%= form_with url: key_point_favorite_path(key_point), method: :delete, local: true do |f| %>
+                <button type="submit" class="btn"><i class="fas fa-star"></i></button>
+              <% end %>
+            <% else %>
+              <%= form_with url: key_point_favorite_path(key_point), method: :post, local: true do |f| %>
+                <button type="submit" class="btn"><i class="far fa-star"></i></button>
+              <% end %>
+            <% end %>          
           </td>
         </tr>
       <% end %>

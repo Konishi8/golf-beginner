@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   root to: 'home#top'
   get 'mypage', to: 'mypage#show', as: 'mypage'
   resources :practice_records
-  resources :key_points
+  resources :key_points do
+    resource :favorite, only: [:create, :destroy]
+  end
 end
