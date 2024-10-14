@@ -1,0 +1,13 @@
+ja:
+  practice_records:
+    index: '練習記録一覧'
+    new: '練習記録作成'
+    date: '日付'
+    goal: '目標'
+    comment: 'コメント'
+    action: 'アクション'
+    menu: '練習メニュー'
+  key_point:
+    index: 'キーポイント一覧'
+    new: 'キーポイント作成'
+    title: 'キーポイント名'

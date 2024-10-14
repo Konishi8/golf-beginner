@@ -1,12 +1,12 @@
-<h1>練習記録一覧</h1>
-<%= link_to '練習記録作成', new_practice_record_path %>
+<h1><%= t('practice_records.index') %></h1>
+<%= link_to t('practice_records.new'), new_practice_record_path %>
 <table class="table table-striped" style="table-layout: fixed; width: 100%;">
   <thead>
     <tr>
-      <th class="p-3" style="width: 15%;">日付</th>
-      <th class="p-3" style="width: 20%;">目標</th>
-      <th class="p-3" style="width: 45%;">コメント</th>
-      <th class="p-3" style="width: 20%;">操作</th>
+      <th class="p-3" style="width: 15%;"><%= t('practice_records.date') %></th>
+      <th class="p-3" style="width: 20%;"><%= t('practice_records.goal') %></th>
+      <th class="p-3" style="width: 45%;"><%= t('practice_records.comment') %></th>
+      <th class="p-3" style="width: 20%;"><%= t('practice_records.action') %></th>
     </tr>
   </thead>
   <tbody>

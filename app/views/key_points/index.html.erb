@@ -1,6 +1,8 @@
 <div class="container">
-  <h1>主軸ポイント一覧</h1>
-  <%= link_to 'キーポイント作成', new_key_point_path %>
+  <h1><%= t('key_point.index')%></h1>
+  <p>お気に入り登録したキーポイントが、マイページに表示されます</p>
+
+  <%= link_to t('key_point.new'), new_key_point_path %>
   <table class="table table-striped">
     <thead>
       <tr>

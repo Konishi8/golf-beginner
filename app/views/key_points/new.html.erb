@@ -1,23 +1,18 @@
-<h1 class="text-center my-4">キーポイント作成</h1>
+<h1 class="text-center my-4"><%= t('key_point.new')%></h1>
 
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <%= form_with model: @key_point, local: true do |form| %> <!-- form_for を form_with に変更 -->
         <div class="form-group row">
-          <%= form.label :title, class: 'col-sm-2 col-form-label' %>
+          <%= form.label :title, t('key_point.title'), class: 'd-block' %>
+          <br>
           <div class="col-sm-10">
             <%= form.text_field :title, placeholder: "35文字以内で入力してください", class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-sm-10 offset-sm-2">
             <%= form.submit "作成", class: "btn btn-primary" %>
           </div>
         </div>
       <% end %>
-
       <div class="text-center mt-3">
         <%= link_to '一覧に戻る', key_points_path, class: 'btn btn-secondary' %>
       </div>
