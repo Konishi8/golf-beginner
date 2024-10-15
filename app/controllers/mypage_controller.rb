@@ -3,5 +3,6 @@ class MypageController < ApplicationController
 
   def show
     @user = current_user
+    @favorite_key_points = current_user.favorited_key_points
   end
 end
