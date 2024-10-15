@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* line 1, app/assets/stylesheets/top.scss */
+.top-wrapper {
+  background-image: url(/assets/top-a82dc4e7d6ccca34327423953d9244be8294d5d40f2fb084b0a8f757fef9bcc7.jpg);
+  height: calc(100vh - 134px);
+  position: relative;
+  background-position: center;
+}
+
+/* line 7, app/assets/stylesheets/top.scss */
+.top-wrapper .top-inner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 7, app/assets/stylesheets/top.scss */
+  .top-wrapper .top-inner-text {
+    font-size: 2.0rem;
+  }
+}
+
+/* line 23, app/assets/stylesheets/top.scss */
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* line 28, app/assets/stylesheets/top.scss */
+.text-truncate {
+  white-space: nowrap;
+  /* 1行に収める */
+  overflow: hidden;
+  /* 見えない部分を隠す */
+  text-overflow: ellipsis;
+  /* 長すぎるテキストに "..." を付与 */
+}
+
+/* line 35, app/assets/stylesheets/top.scss */
+.date-select-inline select {
+  display: inline-block;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* line 41, app/assets/stylesheets/top.scss */
+.sidebar {
+  height: calc(100vh - 60px);
+  /* 画面の高さからヘッダーの高さを引く */
+  overflow-y: auto;
+  /* サイドバーが長い場合にスクロールできるようにする */
+}
