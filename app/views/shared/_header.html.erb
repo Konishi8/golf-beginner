@@ -1,6 +1,10 @@
 <header>
   <nav class='navbar navbar-expand-lg navigation bg-primary fixed-top'>
   <%= image_tag('logo.png', class: 'logo') %>
+  <h3 class="text-center px-5"><%=current_user.name%>様</h3>
+  <%= link_to 'マイページ', mypage_path, class: 'btn' %>
+  <%= link_to '練習記録一覧', practice_records_path, class: 'btn' %>
+  <%= link_to 'キーポイント一覧', key_points_path, class: 'btn' %>
   <%= form_with url: destroy_user_session_path, method: :delete do %>
     <%= submit_tag 'ログアウト', class: 'btn' %>
   <% end %>
