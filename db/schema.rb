@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_01_073733) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_22_094857) do
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
     t.integer "key_point_id"
@@ -31,6 +31,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_01_073733) do
     t.datetime "date"
     t.string "goal"
     t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "practices", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "count"
+    t.datetime "practice_date"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
