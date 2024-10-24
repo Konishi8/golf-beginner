@@ -9,7 +9,7 @@ class User < ApplicationRecord
   def favorite(key_point)
     favorited_key_points << key_point
   end
-  
+
   def unfavorite(key_point)
     favorited_key_points.destroy(key_point)
   end

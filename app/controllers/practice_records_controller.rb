@@ -1,6 +1,6 @@
 class PracticeRecordsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_practice_record, only: [:show, :edit, :destroy, :update]
+  before_action :set_practice_record, only: %i[show edit destroy update]
 
   def update
     if @practice_record.update(practice_record_params)
@@ -29,7 +29,7 @@ class PracticeRecordsController < ApplicationController
 
   def create
     @practice_record = current_user.practice_records.build(practice_record_params)
-    
+
     if @practice_record.save
       redirect_to @practice_record, notice: '練習記録が作成されました。'
     else

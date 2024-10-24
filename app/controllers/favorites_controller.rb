@@ -4,12 +4,12 @@ class FavoritesController < ApplicationController
 
   def create
     current_user.favorite(@key_point)
-    redirect_to key_points_path, notice: "お気に入りに追加しました！"
+    redirect_to key_points_path, notice: 'お気に入りに追加しました！'
   end
 
   def destroy
     current_user.unfavorite(@key_point)
-    redirect_to key_points_path, notice: "お気に入りを解除しました！"
+    redirect_to key_points_path, notice: 'お気に入りを解除しました！'
   end
 
   private
