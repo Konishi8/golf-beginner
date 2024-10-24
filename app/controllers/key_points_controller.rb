@@ -1,6 +1,6 @@
 class KeyPointsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_key_point, only: [:edit, :update, :destroy]
+  before_action :set_key_point, only: %i[edit update destroy]
 
   def index
     @key_points = current_user.key_points
@@ -19,8 +19,7 @@ class KeyPointsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @key_point.update(key_point_params)
