@@ -5,6 +5,7 @@
   <%= link_to 'マイページ', mypage_path, class: 'btn' %>
   <%= link_to '練習記録一覧', practice_records_path, class: 'btn' %>
   <%= link_to 'キーポイント一覧', key_points_path, class: 'btn' %>
+  <%= link_to '練習メニュー一覧', practices_path, class: 'btn' %>
   <%= form_with url: destroy_user_session_path, method: :delete do %>
     <%= submit_tag 'ログアウト', class: 'btn' %>
   <% end %>

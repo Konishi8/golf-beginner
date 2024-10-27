@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'practices/index'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   resources :key_points do
     resource :favorite, only: %i[create destroy]
   end
+  resources :practices
 end
