@@ -1,0 +1,2 @@
+module PracticeMenusHelper
+end
