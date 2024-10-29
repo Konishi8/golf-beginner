@@ -16,4 +16,5 @@ Rails.application.routes.draw do
     resource :favorite, only: %i[create destroy]
   end
   resources :practices
+  resources :practice_menus
 end
