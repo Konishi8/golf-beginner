@@ -1,13 +1,39 @@
 <header>
-  <nav class='navbar navbar-expand-lg navigation bg-primary fixed-top'>
-  <%= image_tag('logo.png', class: 'logo') %>
-  <h3 class="text-center px-5"><%=current_user.name%>様</h3>
-  <%= link_to 'マイページ', mypage_path, class: 'btn' %>
-  <%= link_to '練習記録一覧', practice_records_path, class: 'btn' %>
-  <%= link_to 'キーポイント一覧', key_points_path, class: 'btn' %>
-  <%= link_to '練習メニュー一覧', practice_menus_path, class: 'btn' %>
-  <%= form_with url: destroy_user_session_path, method: :delete do %>
-    <%= submit_tag 'ログアウト', class: 'btn' %>
-  <% end %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <%= link_to image_tag('logo.png', class: 'logo'), root_path, class: 'navbar-brand' %>
+
+      <!-- トグルボタン（モバイル対応）-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- ユーザー名を中央に表示 -->
+        <h3 class="text-center mx-auto text-white"><%= current_user.name %> 様</h3>
+
+        <!-- ナビゲーションメニュー -->
+        <ul class="navbar-nav ms-auto">
+          <!-- ドロップダウンメニュー -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              メニュー
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><%= link_to 'マイページ', mypage_path, class: 'dropdown-item' %></li>
+              <li><%= link_to '練習記録一覧', practice_records_path, class: 'dropdown-item' %></li>
+              <li><%= link_to 'キーポイント一覧', key_points_path, class: 'dropdown-item' %></li>
+              <li><%= link_to '練習メニュー一覧', practice_menus_path, class: 'dropdown-item' %></li>
+            </ul>
+          </li>
+          <!-- ログアウトボタン -->
+          <li class="nav-item">
+            <%= form_with url: destroy_user_session_path, method: :delete, class: "d-inline" do %>
+              <%= submit_tag 'ログアウト', class: 'btn btn-link nav-link text-white' %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
