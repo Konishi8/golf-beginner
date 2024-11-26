@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   end
   resources :practices
   resources :practice_menus
+  get 'how_to_use', to: 'pages#how_to_use', as: 'howto'
 end
