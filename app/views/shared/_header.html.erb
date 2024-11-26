@@ -3,18 +3,14 @@
     <div class="container">
       <%= link_to image_tag('logo.png', class: 'logo'), root_path, class: 'navbar-brand' %>
 
-      <!-- トグルボタン（モバイル対応）-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- ユーザー名を中央に表示 -->
         <h3 class="text-center mx-auto text-white"><%= current_user.name %> 様</h3>
 
-        <!-- ナビゲーションメニュー -->
         <ul class="navbar-nav ms-auto">
-          <!-- ドロップダウンメニュー -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               メニュー
